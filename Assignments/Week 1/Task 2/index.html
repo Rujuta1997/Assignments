@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>(Task 2) 3x3 grid + list</title>
+    <style>
+        *{
+            font-family: sans-serif;
+            letter-spacing: 1px;
+        }
+        .container{
+            display: flex;
+            flex-direction: column;
+            width:100%;
+        }
+        .row-x{
+            margin: auto;
+            display: flex;
+            width: 800px;
+            justify-content: center;
+        }
+        .row-x img{
+            width: 220px;
+            height: 200px;
+            border: 1px solid lightgray;
+            border-radius: 5px;
+            margin: 1%;
+            cursor: pointer;
+        }
+        .preserve-width{
+            overflow: auto;
+            width:100%;
+            
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 style="margin: auto;"> 
+           Laptops
+        </h2>
+       <div class="preserve-width">
+            <div class="row-x">
+                <img src="./imgs/dell.gif" onclick="showDetails('Dell Inspiron', ' Intel Pentium N3540 Processor 2.16GHz (2M Cache, up to 2.66GHz)', '500GB 5400RPM SATA Hard DriveMemory  2GB Single Channel DDR3 1600MHz (2GBx1)', 'Intel HD Graphics', '14-inch HD (1366 x 768) Truelife LED-Backlit Display', 'ul' )" alt="">
+                <img src="./imgs/lenovo.gif" onclick="showDetails('Lenovo Yoga 520-Q7IN', '3.1GHz Intel Core i5-7200U 7th Gen Processor', '4GB DDR4 RAM, 1TB Serial ATA hard drive', 'Integrated Graphics', '14-inch Screen' , 'ul' )" alt="">
+
+                <img src="./imgs/asus.gif" onclick="showDetails('Asus N551JK-CN016H', 'Intel Core i7-4710HQ 2.50GHz Processor ', '8GB DDR3 Memory / 1TB HDD ', 'nVidia GeForce GTX850M 4GB GDDR3 VRAM', '15.6inch IPS FHD (1920x1080) LED', 'ul')" alt="">
+            </div>
+            <div class="row-x">
+                <img src="./imgs/mac.gif" onclick="showDetails('MacBook Pro - Space Grey','2.0GHz quad-core 10th-generation Intel Core i5 processor, Turbo Boost up to 3.8GHz', '8GB unified memory/ 256GB SSD storage', 'Intel Iris Plus Graphics', '33.78 cm (13.3-inch) Retina display with True Tone', 'ol' )" alt="">
+                <img src="./imgs/acer.gif" onclick="showDetails('Aspire 5 series', '11th Generation Intel® Core i3-1115G4 processor', '4 GB of onboard DDR4 system memory, upgradable up to 20 GB/ 1 TB HDD 6.3 cm (2.5-inch) 5400 RPM', 'Intel® UHD Graphics', '39.6 cm (15.6imch) Full HD 1920 x 1080 pixel, high-brightness Acer ComfyView™ LED-backlit TFT LCD', 'ol')" alt="">
+                <img src="./imgs/hp.gif" onclick="showDetails('HP Pavilion X360 11-U056TU - Modern Gold', 'Intel Pentium Processor N3710 1.60GHz (2M Cache, up to 2.56 GHz', '4GB DDR3L SDRAM (1 x 4 GB)/500 GB 5400 rpm SATA','Integrated Intel HD Graphics', '11.6-inch Multi touch - enabled WLED-Backlit', 'ol')" alt="">
+            </div>
+            <div class="row-x">
+                <img src="./imgs/alienware.gif" onclick="showDetails('Alienware Area-51m', '3.6GHz Intel Core i9-9900K (8-core, 16MB cache, up to 5.0GHz)', '32GB DDR4 (2,400MHz / 2 x 512GB RAID 0 SSD (PCIe), 1TB SSHD) ', 'Nvidia GeForce RTX 2080 (8GB GDDR6) Intel UHD Graphics 630','17.3-inch Full HD (1,920 x 1,080) IPS, 144Hz, G-Sync', 'dl')" alt="">
+                <img src="./imgs/microsoft.gif" onclick="showDetails('surface pro 7', 'Dual-core 10th Gen Intel® Core™ i3-1005G1 Processor', 'Solid-state drive (SSD) options: 128GB, 256GB / 4GB, 8GB or 16GB LPDDR4x RAM', 'Intel® UHD Graphics (i3)', 'Screen: 12.3” PixelSense™ Display Resolution: 2736 x 1824 (267 PPI) Aspect ratio: 3:2 Touch: 10 point multi-touch', 'dl')" alt="">
+                <img src="./imgs/lg.gif" onclick="showDetails('LG Gram 14Z970-G', '	Intel Core i5 7th Gen 7200U 2.5 GHz', '8GB RAM / 256GB SSD ', 'Integrated Intel HD Graphics 620', '323.40 x 211.80 x 14.50 Dark Silver', 'dl')" alt="">
+            </div>
+       </div>
+       <script>
+           function showDetails(name, processor, storage , graphics, display, listtype ){
+
+                data={
+                    Name: name,
+                    Processor: processor,
+                    "Storage and Ram": storage,
+                    Graphics: graphics,
+                    Display: display,
+                    listtype: listtype
+                };
+                const date=new Date();
+                date.setTime(date.getTime()+30000);
+                expires="expires="+date.toUTCString();
+                document.cookie="data="+JSON.stringify(data)+";"+expires;
+                window.location.href="display.html";
+           }
+       </script>
+    </div>
+</body>
+</html>
