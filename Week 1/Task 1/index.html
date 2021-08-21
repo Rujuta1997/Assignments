@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+   
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./css/index.css">
+    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous"> -->
+    <title>Pyramid of videos</title>
+    <style>
+        /* .container-y{
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .holder{
+            overflow: auto;
+            width:100%;
+        }
+        .master-grid{
+            border: 1px solid lightgray;
+            align-self: center;
+            display: grid;
+            margin: 5%;
+            width: fit-content;
+            grid-template-rows: repeat(3, 1fr);
+        }
+        .ytp-chrome-top.active{
+            display:none;
+        }
+        .master-grid iframe{
+            justify-self: center;
+            margin: 1% 2%;
+        }
+        .row-1{
+            display: grid;;
+            grid-template-columns: repeat(3,1fr);
+        
+        }   
+        .row-2{
+            display: grid;;
+            grid-template-columns: repeat(2,1fr);
+        
+        }     
+        .row-3{
+            display: grid;;
+            grid-template-columns: repeat(1,1fr);
+        
+        } */
+        .container-x{
+            width: auto;
+            margin: 2%;
+            overflow: auto;
+            border-radius: 10px;
+            border: 1px solid lightgray;
+            align-items: center;
+            flex-direction: column;
+        }
+        .row-x{
+            display: flex;
+            width: 1000px;
+            
+            margin: auto;
+            justify-content: center;
+        }
+        .image-class{
+            display: block;
+            width:20%;
+            margin: auto;
+            height:20%;
+            cursor: pointer;
+            border-radius: 20px;
+            background-repeat: no-repeat;
+            background-size: cover;
+            background-position: center; 
+        }
+        .image-class:hover{
+            background: rgb(168, 15, 15);
+        }
+        .supreme-force{
+            width: 310px;
+            display: flex;
+            margin:auto;
+            border-radius: 5px;
+            border: 1px solid lightgray;
+            position: relative;
+            height: 200px;
+            margin:1%;
+        }
+        .iframe{
+            width:100%;
+            height:100%;
+        }
+        .thumbnail{
+            display: flex;
+            width: 100%;
+            background-repeat: no-repeat;
+            background-size: cover;
+            justify-content: center;
+            height: 100%;
+            background-position: center;
+            position:absolute;
+        }
+        
+    </style>
+</head>
+
+<body >
+    <div class="container-x">
+       
+        <h1 style="font-family: 'Courier New', Courier, monospace;">Flex system without bootstrap</h1>
+
+        <div class="holder">
+            <div class="row-x">
+                <div class="supreme-force" data="KJgsSFOSQv0"  imglink="./imgages/c.png" ></div>
+
+            </div>
+            <div class="row-x">
+                 <div class="supreme-force" data="vLnPwxZdW4Y"  imglink="./imgages/c++.png" ></div>
+                 <div class="supreme-force" data="hBh_CC5y8-s"  imglink="./imgages/java.jpg" ></div>
+
+            </div>
+            <div class="row-x">
+                
+                <div class="supreme-force" data="WGJJIrtnfpk" imglink="./imgages/python.jpg" ></div>
+                <div class="supreme-force" data="o1IaduQICO0"  imglink="./imgages/javascript.png" ></div>
+                <div class="supreme-force" data="BsDoLVMnmZs"  imglink="./imgages/html.png" ></div>
+                
+            </div>
+        </div>
+    </div>
+  
+    <!-- <div class="container-y">
+        <h1>Grid System (without bootstrap)</h1>
+        <div class="holder">
+            <div class="master-grid">
+                <div class="row-1">
+                    <iframe src="https://www.youtube.com/embed/BsDoLVMnmZs" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/o1IaduQICO0" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                    <iframe src="https://www.youtube.com/embed/WGJJIrtnfpk" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+                <div class="row-2">
+                    <iframe style="justify-self: end;" src="htps://www.youtube.com/embed/hBh_CC5y8-s" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                    <iframe style="justify-self: start;" src="https://www.youtube.com/embed/vLnPwxZdW4Y" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+                <div class="row-3">
+                    <iframe src="https://www.youtube.com/embed/KJgsSFOSQv0" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="container-fluid">
+        
+       <div class="card m-5">
+        <h1 class="m-2" >With bootstrap</h1>
+            <div class="row justify-content-center m-3">
+                <div class="col-sm-3">
+                    <iframe width="100%" height="auto" src="https://www.youtube.com/embed/BsDoLVMnmZs" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+                <div class="col-sm-3">
+                    <iframe width="100%" height="auto" src="https://www.youtube.com/embed/o1IaduQICO0" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+                <div class="col-sm-3">
+                    <iframe width="100%" height="auto" src="https://www.youtube.com/embed/WGJJIrtnfpk" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="row justify-content-center m-3">
+                <div class="col-sm-3">
+                    <iframe  width="100%" height="auto" src="htps://www.youtube.com/embed/hBh_CC5y8-s" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+                <div class="col-sm-3">
+                    <iframe  width="100%" height="auto" src="https://www.youtube.com/embed/vLnPwxZdW4Y" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+                </div>
+            </div>
+            <div class="row justify-content-center m-3">
+                <div class="col-sm-3">
+                    <iframe  width="100%" height="auto"src="https://www.youtube.com/embed/KJgsSFOSQv0" title="YouTube video player" frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                    allowfullscreen></iframe>
+                </div>
+            </div>
+       </div>
+    </div> -->
+    <script>
+      
+        let elements=document.querySelectorAll(".supreme-force");
+        for(let i=0;i<elements.length;i++)
+        {
+            let id=elements[i].getAttribute("data");
+            let img=elements[i].getAttribute("imglink");
+            let iframe=document.createElement("iframe");
+            let url="https://www.youtube.com/embed/"+id;
+            iframe.setAttribute("src", url);
+            iframe.setAttribute("id", i);
+            iframe.setAttribute("allow", "autoplay");
+            iframe.setAttribute("class", "iframe");
+            iframe.setAttribute("frameborder", "0");
+
+            let div=document.createElement("div");
+            div.setAttribute("class", "thumbnail");
+            div.style.backgroundImage="url("+img+")";
+            div.setAttribute("id", i+"img");
+
+
+            let image=document.createElement("img");
+            image.setAttribute("src", "./images/play-btn.svg");
+            image.setAttribute("class", "image-class")
+            image.setAttribute("alt", "no image found");
+            
+            image.setAttribute("onclick", "playVideo('"+i+"' ,'"+i+"img')");
+            
+            div.append(image);
+            elements[i].append(div);
+            elements[i].append(iframe);
+        }
+
+
+        function playVideo(idiframe, idimage){
+            let temp=document.getElementById(idiframe);
+            let tempsrc=temp.getAttribute("src");
+            tempsrc+="?enablejsapi=1&autoplay=1";
+            temp.setAttribute("src", tempsrc);
+            document.getElementById(idimage).style.display="none";
+        }
+
+        
+    </script>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM"
+        crossorigin="anonymous"></script> -->
+</body>
+
+</html>
